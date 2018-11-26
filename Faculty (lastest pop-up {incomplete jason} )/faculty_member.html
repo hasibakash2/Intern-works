@@ -1,0 +1,282 @@
+<html>
+<head>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="faculty_member.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+ 
+</head>
+<body>
+  
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="npm.js"></script>
+
+
+
+ <script type="text/javascript">
+      <!--
+          function toggle_visibility(id,clickedElement) {
+             var e = document.getElementById(id);
+             var task = document.getElementById("task");
+             var duration = document.getElementById("duration");
+             var desc = document.getElementById("desc");
+             if(e.style.display == 'block')
+                e.style.display = 'none';
+
+             else{
+                task.innerHTML=clickedElement.innerHTML+" - Completed!! ";
+
+                e.style.display = 'block';
+
+
+             }
+          }
+      //-->
+    </script>
+
+
+
+
+
+
+
+
+  
+<div class="container">
+  <h2></h2>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click to Show the profile</button>
+<a href="index.html" class="w3-button w3-black" role="button">Back</a>
+  <div id="demo" class="collapse">
+    
+<p id="demo"></p>
+
+
+<style>
+	
+		 #popupBoxOnePosition{
+        top: 0; 
+        left: 0; 
+        position: fixed; 
+        width: 100%; 
+        height: 120%;
+        background-color: rgba(0,0,0,0.7); 
+        display: none;
+      }
+      
+      .popupBoxWrapper{
+        width: 550px; 
+        margin: 50px auto; 
+        text-align: left;
+      }
+      .popupBoxContent{
+        background-color: #FFF; 
+        padding: 15px;
+      }
+
+
+
+
+
+
+
+    h4{
+       		margin-left: 80px;
+
+       }
+
+   </style>
+
+
+
+
+
+
+
+
+
+<h1><span class="label label-default">Department of XXXXXXXX </span></h1>
+
+<div class="container-fluid">
+<div class="col-xs-6 col-md-3">
+    
+			 
+ 
+	<h4><b>"Name"</b><br>
+		<b>"Rank"</b></h4>
+
+
+<div id="wrapper">
+
+
+<ul id="myUL" >
+<!-- 2 -->
+ 
+  <a href="javascript:void(0)" class="thumbnail">
+     <h2> <img src="professor.jpg" class="img-responsive" alt="..."> </h2></a>
+
+</ul> 
+
+    </div>
+
+
+
+
+<div id="popupBoxOnePosition">
+      <div class="popupBoxWrapper">
+        <div class="popupBoxContent">
+          <h2 id="task">Task-1</h2>
+          <h4 id="desc">Descriptions</4><br>
+          <p id="duration"> work duration: </p>
+          <button> <a  onclick="toggle_visibility('popupBoxOnePosition');">Close</a> </button>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+
+</div>
+
+<script type="text/javascript">
+var x = document.getElementById("myUL");
+x.addEventListener("click", myFunction);
+
+
+function myFunction(e) {
+  console.log(e);  
+  console.log(e.target.innerHTML);
+  toggle_visibility('popupBoxOnePosition',e.target);
+  //alert ("The work is Done");
+}
+
+</script>
+
+
+
+
+<h2><span class="label label-default"><u>Highest Educational Attainment</u> </span></h2>
+
+
+
+<p>
+	
+
+</p>
+
+
+<ul class="list-group">
+  <li class="list-group-item">High School Student</li>
+  <dd>- No Work Experience </dd>
+  <dd>- Some Work Experience </dd>
+  <li class="list-group-item">College Student/Recent Graduate</li>
+ 	<dd>- No Work Experience </dd>
+  	<dd>- Some Work Experience </dd>
+   <li class="list-group-item">Working Professional</li>
+     <dd>- No Work Experience </dd>
+ 	 <dd>- Some Work Experience </dd>
+ 
+</ul>
+     
+     
+   
+
+
+
+
+
+<h2><span class="label label-default"><u>Courses Taught</u> </span></h2>
+
+
+
+<ul class="list-group">
+  <li class="list-group-item">Programming Language-1 (C)</li>
+  <li class="list-group-item">Programming Language-2 (C++)</li>
+  <li class="list-group-item">Object Oriented Programmin Language-1 (JAVA)</li>
+  <li class="list-group-item">Object Oriented Programmin Language-2 (C#)</li>
+  <li class="list-group-item">Web Technology</li>
+  <li class="list-group-item">ADVANCED TOPICS IN PROGRAMMING I - (JAVA based)</li>
+  <li class="list-group-item">ADVANCED TOPICS IN PROGRAMMING II- (C# based)</li>
+  <li class="list-group-item">ADVANCED TOPICS IN PROGRAMMING III (WEB based)</li>
+ 
+</ul>
+
+
+
+
+
+
+<h2><span class="label label-default"><u>Areas of Interest</u> </span></h2>
+
+
+
+<ul class="list-group">
+  <li class="list-group-item">Programming</li>
+  <li class="list-group-item">Networking</li>
+  <li class="list-group-item">Information Technology</li>
+  <li class="list-group-item">Others</li>
+  
+</ul>
+
+
+
+
+<h2><span class="label label-default"><u>Selected Publications</u> </span></h2>
+
+<ul class="list-group">
+  <li class="list-group-item">American International University Bangladesh (AIUB)</li>
+  <li class="list-group-item">North South University</li>
+  <li class="list-group-item">South East University</li>
+  <li class="list-group-item">Dhaka University</li>
+  <li class="list-group-item">Others</li>
+  
+</ul>
+
+		 
+		 
+
+
+
+<h2><span class="label label-default"><u>Conferences</u> </span></h2>
+
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-addon">
+      	<p>Attended any kind of Conferrence/s related your interest fields?</p>
+      	<p><input type="radio" name="name">Yes</p>
+        <p><input type="radio" name="name">No</p>
+		 
+		 
+      </span>
+     
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  
+</div><!-- /.row -->
+
+
+
+<h2><span class="label label-default"><u>Contact Information</u> </span></h2>
+
+<b>American Internation University-Bangladesh (AIUB)</b>
+<p>Parmanent Campus</p>
+<p>  Level# 1, Annex# 4, Room# “XXXXX”</p>
+<p>  Ka-66/1, Kuratoli Road, Kuril, Khilkhet, </p>
+<p>  Dhaka 1229, Bangladesh</p>
+<p> E-mail: <a href="http://www.aiub.edu/"> xxxxxxx@aiub.edu </a></p>
+
+</body>
+</html>

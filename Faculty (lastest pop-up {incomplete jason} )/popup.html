@@ -1,0 +1,317 @@
+<html>
+<head>
+
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript">
+      var myObject =
+	{
+      Professors:{
+    	1:{
+    		name:"Professor 1",
+    		Educational_Attainment:["High School Student","-- No Work Experience","College Student/Recent Graduate","-- Some Work Experience","Working Professional","-- 6 Years Experience"],
+    		degree:["SSC From School","HSC From College","B.Sc in Computer Science From AIUB"],
+    		coursesTaught: ["Programming Language-1 (C)", "Programming Language-2 (C++)", "Object Oriented Programmin Language-1 (JAVA)", "Object Oriented Programmin Language-2 (C#)", "Web Technology", "ADVANCED TOPICS IN PROGRAMMING I - (JAVA based)","ADVANCED TOPICS IN PROGRAMMING II- (C# based)","ADVANCED TOPICS IN PROGRAMMING III (WEB based)"],
+    		Teaching_Experience:["Teaching_Experience: 30 Years"],
+    		Lecturer:["Lecturer: 9 years","Reader: 11 years","13 years"],
+    		Conference:["Attended any Conference?","Yes,I had Attended 20 Conferences"],
+    		email:["Email: professor 1 @gmail.com"],
+    		Phone_no:["Phone No. : 01X-20293456"],
+    		facebook_id:["Facebook Id : professor 1 @facebook.com"]
+    		},
+      },
+
+      getProfessorById: function(prof) {
+        return this.Professors[prof] 
+        
+        /*+ " " + this.Professor2*/;
+    	}
+	}           
+
+  var myObject1 =
+  {
+      Professors:{
+      2:{
+        name:"Professor 2",
+        Educational_Attainment:["High School Student","-- Some Work Experience","College Student/Recent Graduate","-- No Work Experience","Working Professional","-- 3 Years Experience"],
+        degree:["SSC From School2","HSC From College2","B.Sc in Computer Science From AIUB2"],
+        coursesTaught: ["Programming Language-3 (C)", "Object Oriented Programmin Language-1 (JAVA)", "Object Oriented Programmin Language-2 (C#)", "Web Technology", "ADVANCED TOPICS IN PROGRAMMING I - (JAVA based)","ADVANCED TOPICS IN PROGRAMMING II- (C# based)"],
+        Teaching_Experience:["Teaching_Experience: 15Years"],
+        Lecturer:["Lecturer: 5 years","Reader: 5 years","Professor: 5 years"],
+        Conference:["Attended any Conference?","Yes,I had Attended 15 Conferences"],
+        email: ["professor 2 @gmail.com"],
+        Phone_no:["01X-85264982"],facebook_id:["professor 2 @facebook.com"]
+        },
+      },
+
+      getProfessorById: function(prof) {
+        return this.Professors[prof] 
+        
+        /*+ " " + this.Professor2*/;
+      }
+  }           
+
+             function toggle_visibility(id,clickedElement) {
+             var e = document.getElementById(id);
+             var prof = document.getElementById("prof");
+             var prof1 = document.getElementById("prof1");
+             var prof2 = document.getElementById("prof2");
+             var time = document.getElementById("time");
+             if (clickedElement==null || clickedElement.id==undefined ) {e.style.display = 'none';}
+             x = myObject.getProfessorById(clickedElement.id);
+            
+              var myJSON = JSON.stringify(myObject);  
+              document.getElementById("json").innerHTML=myJSON;
+
+             document.getElementById("professorname").innerHTML = x.name;
+             if(e.style.display == 'block')
+                e.style.display = 'none';
+             else{
+             	e.style.display = 'block';
+             	setList(x.Educational_Attainment,"Educational_Attainment");
+             	setList(x.degree,"degree");
+             	setList(x.coursesTaught,"coursesTaught");
+             	setList(x.Teaching_Experience,"Teaching_Experience");
+             	setList(x.Lecturer,"Lecturer");
+             	setList(x.Conference,"Conference");
+             	setList(x.email,"email");
+             	setList(x.Phone_no,"Phone_no");
+             	setList(x.facebook_id,"facebook_id");
+                prof.innerHTML=clickedElement.innerHTML+ "";
+
+
+             }
+          }
+          function setList(listItems,listID){
+          	var text = "";
+			var i;
+			var ul= document.getElementById(listID);
+			ul.innerHTML="";
+			for (i = 0; i < listItems.length; i++) {
+			    var li = document.createElement("li");
+				  li.appendChild(document.createTextNode(listItems[i]));
+				  li.setAttribute("class", "list-group-item");
+				  ul.appendChild(li);
+			}
+          } 
+
+
+          
+</script>
+<style>
+ 	 
+ #popupBoxOnePosition{
+        top: -80; 
+        left: 0; 
+        position: fixed; 
+        width: 100%; 
+        height: 120%;
+        background-color: rgba(0,0,0,0.7);
+        display: none;
+      }  
+      .popupBoxWrapper{
+        width: 1000px;
+        margin: 100px auto; 
+        text-align: left;
+        }
+      .popupBoxContent{
+        background-color: white; 
+        padding: 15px;
+        }
+      #overflowTest {
+      background: white;
+      color: darkgreen;
+      padding: 15px;
+      width: 100%;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    }
+
+    /*close button in popup*/
+   
+
+
+    /* Include the padding and border in an element's total width and height */
+    * {
+    box-sizing: border-box;
+    }
+    /* Style the list items */
+    ul li {
+    cursor: pointer;
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      list-style-type: none;
+      background: ;
+      font-size: 18px;
+      transition: 0.2s;
+      }
+    /* When clicked on, add a background color and strike out text */
+    ul li.checked {
+    background: #888;
+      color: #fff;
+      text-decoration: line-through;
+    }
+    /* Style the close button */
+    .close {
+    position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+    }
+    /* Clear floats after the header */
+      .header:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /* Style the input */
+    input {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      width: 75%;
+      padding: 10px;
+      float: left;
+      font-size: 16px;
+    }
+    /* Style the "Add" button */
+    .addBtn {
+      padding: 10px;
+      width: 25%;
+      background: #d9d9d9;
+      color: #555;
+      float: right;
+
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
+    }
+    h1{
+      color: white;
+    text-align: center;
+      }
+    h2{
+        margin-top: 20px;
+        margin-bottom: 50px;
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+      h4{
+        text-align: center;
+        }
+      h3{
+        color: yellow;
+        text-align: center;
+        }
+        h4{
+          margin-left: 80px;
+      }
+
+</style>
+<!-- PROFESSOR -->
+<div class="">
+   <center> <h1><span class="label label-default">Department of XXXXXXXX </span></h1></center>
+   		<div >
+  			<div class="col-xs-6 col-md-3">
+  				<div id="wrapper">
+				  		<ul id="prof-1" >
+						<!-- 2 -->
+						<img  src="professor.jpg" id="1"  alt="..."> <a href="javascript:void(0)"></a>
+						<center><h4><b>"Hasib"<b></h4></center>
+					    <center><h4><b>"1"</b></h4></center>	 
+					  	<img src="professor.jpg" id="2" alt="..."> <a  href="javascript:void(0)" ></a>
+					  	<center><h4><b>"AKash"<b></h4></center>
+					    <center><h4><b>"2"</b></h4></center>
+						<img  src="professor.jpg" id="3" alt="..."> <a  href="javascript:void(0)" ></a>
+					  	<center><h4><b>"Islam"<b></h4></center>
+					    <center><h4><b>"3"</b></h4></center>
+				  </ul> 
+			</div>
+ 		</div>	
+
+<div class="container">
+
+<div id="popupBoxOnePosition" >
+
+      <div class="popupBoxWrapper" >
+
+      <img src="closebtn.png" id="clse" class="clse-button" onclick="toggle_visibility('popupBoxOnePosition');">  
+        <div class="popupBoxContent" >
+      <div class="col-md-12 col-sm-12 col-xs-12 image-header"> 
+          <img src="background.jpg" >
+          <div class="centered">
+          <center><h1 id="professorname" ></h1></center>
+          <!-- <h2 id="prof">professor</h2> -->
+        <center><h3 id="professor">Professor of Computer Science</h3></center>      
+    <center><h1><span class="label label-default">Department of CS</span></h1></center>
+</div>
+
+            <div class="user-left-part">
+                <div class="col-md-3 col-sm-3 col-xs-12 ">
+                    
+                        <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
+                            <img src="profile_pic.jpg" class="rounded-circle">
+                       </div>
+                   </div>
+               </div>
+           </div>      
+
+
+ <div id="overFlowTest">
+ <ul>
+  <p id="json"></p> 
+
+</ul>
+  <h2><span class="label label-default"><u>Highest Educational Attainment</u> </span></h2>
+	<ul class="list-group" id="Educational_Attainment"></ul>
+	<h2><span class="label label-default" ><u>Education</u></span></h2>
+	<ul class="list-group" id="degree"></ul>
+	<h2><span class="label label-default" ><u>Teaching</u></span></h2>
+	<ul class="list-group" id="Teaching_Experience"></ul>
+	<ul class="list-group" id="Lecturer"></ul>
+	<h2><span class="label label-default"><u>Courses Taught</u></span></h2>
+	<ul class="list-group" id="coursesTaught"></ul>
+	<h2><span class="label label-default"><u>Conferences</u></span></h2>
+	<ul class="list-group" id="Conference"></ul>
+ 	<h2><span class="label label-default" ><u>Contact ME !</u> </span></h2>
+	<ul class="list-group" id="email"></ul>
+	<ul class="list-group" id="Phone_no"></ul>
+	<ul class="list-group" id="facebook_id"></ul>  
+ 						</div>        
+        			</div>
+      			</div>
+    		</div> 
+
+
+  		</div>
+</div>
+
+
+
+
+<script type="text/javascript" >
+		var x = document.getElementById("prof-1");
+
+		x.addEventListener("click", profileclickeventlistner);
+		function profileclickeventlistner(e) {
+ 	 	console.log(e);  
+    toggle_visibility('popupBoxOnePosition',e.target);
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.rounded-circle {
+  border-radius: 50%;
+}
+
+  .image-header img{
+    width: 100%;
+    height:250px;
+  }
+  .user-image{
+    position: relative;
+    margin-top:-50px;
+  }
+  
+  .user-image img{
+    width:100px;
+    height:100px;
+  }
+ 
+
+ //////////////////////////
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//////////////////////////////////////////////
+
+.clse-button{
+position: center;
+}

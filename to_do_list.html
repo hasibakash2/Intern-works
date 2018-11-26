@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <script type="text/javascript">
+      <!--
+          function toggle_visibility(id,clickedElement) {
+             var e = document.getElementById(id);
+             var task = document.getElementById("task");
+             var duration = document.getElementById("duration");
+             var desc = document.getElementById("desc");
+             if(e.style.display == 'block')
+                e.style.display = 'none';
+
+             else{
+                task.innerHTML=clickedElement.innerHTML+" - Completed!! ";
+
+                e.style.display = 'block';
+
+
+             }
+          }
+      //-->
+    </script>
+
+
+
+
+<style>
+/*1*/
+      #popupBoxOnePosition{
+        top: 0; 
+        left: 0; 
+        position: fixed; 
+        width: 100%; 
+        height: 120%;
+        background-color: rgba(0,0,0,0.7); 
+        display: none;
+      }
+      
+      .popupBoxWrapper{
+        width: 550px; 
+        margin: 50px auto; 
+        text-align: left;
+      }
+      .popupBoxContent{
+        background-color: #FFF; 
+        padding: 15px;
+      }
+
+
+
+
+
+
+/*                     */
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: ;
+  font-size: 18px;
+  transition: 0.2s;
+  
+ 
+}
+
+/* When clicked on, add a background color and strike out text */
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+
+
+
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: right;
+
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<!--  -->
+<div id="myDIV" class="header">
+  <center><h2 style="margin:5px">My To Do List</h2></center>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+
+<div id="wrapper">
+
+
+<ul id="myUL" >
+<!-- 2 -->
+ 
+  <a href="javascript:void(0)"><li>Task 2</li></a>
+
+
+
+  
+  <a href="javascript:void(0)"><li>Task </li></a>
+
+
+
+
+</ul> 
+
+    </div>
+
+<!-- 3 -->
+    <div id="popupBoxOnePosition">
+      <div class="popupBoxWrapper">
+        <div class="popupBoxContent">
+          <h2 id="task">Task-2</h2>
+          <h4 id="desc">Descriptions</4><br>
+          <p id="duration"> work duration: </p>
+          <button> <a  onclick="toggle_visibility('popupBoxOnePosition');">Close</a> </button>
+        </div>
+      </div>
+    </div>
+
+ 
+
+<script>
+
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+
+var x = document.getElementById("myUL");
+x.addEventListener("click", myFunction);
+
+
+function myFunction(e) {
+  console.log(e);  
+  console.log(e.target.innerHTML);
+  toggle_visibility('popupBoxOnePosition',e.target);
+  //alert ("The work is Done");
+}
+
+
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+
+  document.getElementById("myInput").value = "";
+
+
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+
+
+var x = document.getElementById("myBtn");
+
+
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

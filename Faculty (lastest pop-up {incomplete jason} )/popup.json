@@ -1,0 +1,33 @@
+[
+{
+"name":"Professor 1",
+    		"Educational_Attainment":["High School Student","-- No Work Experience","College Student/Recent Graduate","-- Some Work 						 Experience","Working Professional","-- 6 Years Experience"],
+    		degree:["SSC From School","HSC From College","B.Sc in Computer Science From AIUB"],
+    		"coursesTaught": ["Programming Language-1 (C)", "Programming Language-2 (C++)", "Object Oriented Programmin Language-1 (JAVA)", "Object Oriented Programmin Language-2 (C#)", "Web Technology", "ADVANCED TOPICS IN PROGRAMMING I - (JAVA based)","ADVANCED TOPICS IN PROGRAMMING II- (C# based)","ADVANCED TOPICS IN PROGRAMMING III (WEB based)"],
+    		"Teaching_Experience":["Teaching_Experience: 30 Years"],
+    		"Lecturer":["Lecturer: 9 years","Reader: 11 years","13 years"],
+    		"Conference":["Attended any Conference?","Yes,I had Attended 20 Conferences"],
+    		"email":["Email: professor 1 @gmail.com"],
+    		"Phone_no":["Phone No. : 01X-20293456"],
+    		"facebook_id":["Facebook Id : professor 1 @facebook.com"]
+};
+{
+"name":"Professor 2",
+    		"Educational_Attainment":["High School Student","-- Some Work Experience","College Student/Recent Graduate","-- No Work Experience","Working Professional","-- 3 Years Experience"],
+    		"degree":["SSC From School2","HSC From College2","B.Sc in Computer Science From AIUB2"],
+    		"coursesTaught": ["Programming Language-3 (C)", "Object Oriented Programmin Language-1 (JAVA)", "Object Oriented Programmin Language-2 (C#)", "Web Technology", "ADVANCED TOPICS IN PROGRAMMING I - (JAVA based)","ADVANCED TOPICS IN PROGRAMMING II- (C# based)"],
+    		"Conference":["Attended any Conference?","Yes,I had Attended 15 Conferences"],
+    		"email": ["professor 2 @gmail.com"],
+    		"Phone_no":["01X-85264982"],facebook_id:["professor 2 @facebook.com"]
+ };
+{   		
+"name":"Professor 3",
+    		"Educational_Attainment":["High School Student","-- No Work Experience","College Student/Recent Graduate","-- Some Work Experience","Working Professional","-- 4 Years Experience"],
+    		"degree":["SSC From School3","HSC From College3","B.Sc in Computer Science From AIUB3"],
+    		"coursesTaught": ["Object Oriented Programmin Language-1 (JAVA)", "Object Oriented Programmin Language-2 (C#)", "Web Technology", "ADVANCED TOPICS IN PROGRAMMING I - (JAVA based)","ADVANCED TOPICS IN PROGRAMMING II- (C# based)"],
+    		"Conference":["Attended any Conference?","Yes,I had Attended 10 Conferences"],
+    		"email":["professor 3 @gmail.com"],
+    		"Phone_no":["01X-26542362"],
+    		"facebook_id":["professor 3 @facebook.com"]
+}
+]
